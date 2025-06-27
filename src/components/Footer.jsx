@@ -1,0 +1,100 @@
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
+const Footer = () => {
+  return (
+    <footer className="relative text-white">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 animated-gradient opacity-90 " />
+
+      <div className="relative z-10 max-w-7xl mx-auto py-16 px-6 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Logo & About */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">AI.Risezonic</h3>
+            <p className="text-sm text-gray-200">
+              Shaping the future with AI-driven learning and innovation.
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Explore</h4>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Workshops
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <p className="text-sm text-gray-300">📧 support@risezonic.com</p>
+            <p className="text-sm text-gray-300">📞 +91 9876543210</p>
+            <p className="text-sm text-gray-300">📍 Delhi, India</p>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Connect with Us</h4>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-300">
+          © {new Date().getFullYear()} AI.Risezonic. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
