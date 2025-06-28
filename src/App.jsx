@@ -11,10 +11,16 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import AiSolutions from "./pages/AiSolutions";
 import OurProjects from "./pages/OurProjects";
+import ContactUs from "./pages/ContactUs";
+import Blog from "./pages/Blog";
+import Resources from "./pages/Resources";
 
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div className="flex-1 flex flex-col">
@@ -23,9 +29,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/ai-solution-and-product" element={<AiSolutions/> } />
-          <Route path="/our-porjects" element={<OurProjects/> } />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/ai-solution-and-product" element={<AiSolutions />} />
+          <Route path="/our-porjects" element={<OurProjects />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/blogs" element={<Blog />} />
         </Routes>
       </main>
       <Footer />

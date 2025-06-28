@@ -41,10 +41,13 @@ const Navbar = () => {
           </li>
 
           <li className="relative group">
-            <Link to="/ai-solution-and-product">
+            <Link
+              to="/ai-solution-and-product"
+              className={linkClass("/ai-solution-and-product")}
+            >
               {" "}
               <button
-                className="flex items-center gap-1 text-gray-700 hover:text-blue-600 focus:outline-none"
+                className="flex items-center gap-1  hover:text-blue-600 focus:outline-none"
                 onClick={() => setDropdownOpen((open) => !open)}
                 onBlur={() => setDropdownOpen(false)}
               >
@@ -89,8 +92,13 @@ const Navbar = () => {
             </div> */}
           </li>
           <li>
-            <Link to="/our-porjects" className={linkClass("/about")}>
-            Our Project
+            <Link to="/our-porjects" className={linkClass("/our-porjects")}>
+              Our Project
+            </Link>
+          </li>
+          <li>
+            <Link to="/resources" className={linkClass("/resources")}>
+              Resources
             </Link>
           </li>
         </ul>
@@ -110,7 +118,7 @@ const Navbar = () => {
 
           <li>
             <button
-              className="flex items-center w-full text-left text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="flex items-center w-full text-left text-gray-700 hover:text-blue-600 focus:outline-none "
               onClick={() => setDropdownOpen((open) => !open)}
             >
               <Link to="/ai-solution-and-product">
@@ -159,8 +167,26 @@ const Navbar = () => {
             )} */}
           </li>
           <li>
-            <Link to="/our-porjects" className={`block ${linkClass("/about")}`}>
+            <Link
+              to="/our-porjects"
+              className={`block ${linkClass("/our-porjects")}`}
+            >
               Our Project
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={`block ${linkClass("/contact")}`}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={`block ${linkClass("/about")}`}>
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/resources" className={linkClass("/resources")}>
+              Resources
             </Link>
           </li>
         </ul>
