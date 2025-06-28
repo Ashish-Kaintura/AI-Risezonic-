@@ -9,8 +9,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-// import About from './pages/About';
-// import Contact from './pages/Contact';
+import AiSolutions from "./pages/AiSolutions";
+import OurProjects from "./pages/OurProjects";
 
 const App = () => {
   useEffect(() => {
@@ -19,11 +19,12 @@ const App = () => {
   return (
     <div className="flex-1 flex flex-col">
       <Navbar />
-      <main className=" overflow-auto">
+      <main className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-solution-and-product" element={<AiSolutions/> } />
+          <Route path="/our-porjects" element={<OurProjects/> } />
           {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </main>

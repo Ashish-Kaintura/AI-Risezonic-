@@ -41,15 +41,18 @@ const Navbar = () => {
           </li>
 
           <li className="relative group">
-            <button
-              className="flex items-center gap-1 text-gray-700 hover:text-blue-600 focus:outline-none"
-              onClick={() => setDropdownOpen((open) => !open)}
-              onBlur={() => setDropdownOpen(false)}
-            >
-              AI Solutions & Products
-              <FiChevronDown className="mr-1" />
-            </button>
-            <div
+            <Link to="/ai-solution-and-product">
+              {" "}
+              <button
+                className="flex items-center gap-1 text-gray-700 hover:text-blue-600 focus:outline-none"
+                onClick={() => setDropdownOpen((open) => !open)}
+                onBlur={() => setDropdownOpen(false)}
+              >
+                AI Solutions & Products
+                {/* <FiChevronDown className="mr-1" /> */}
+              </button>
+            </Link>
+            {/* <div
               className={`absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50 ${
                 dropdownOpen ? "block" : "hidden"
               } group-hover:block`}
@@ -83,7 +86,12 @@ const Navbar = () => {
                 <FaLightbulb className="mr-2 text-blue-500" />
                 Consulting for Institutions
               </Link>
-            </div>
+            </div> */}
+          </li>
+          <li>
+            <Link to="/our-porjects" className={linkClass("/about")}>
+            Our Project
+            </Link>
           </li>
         </ul>
       </div>
@@ -106,11 +114,11 @@ const Navbar = () => {
               onClick={() => setDropdownOpen((open) => !open)}
             >
               <Link to="/ai-solution-and-product">
-                <FiChevronDown className="mr-1" />
+                {/* <FiChevronDown className="mr-1" /> */}
                 AI Solutions & Products
               </Link>
             </button>
-            {dropdownOpen && (
+            {/* {dropdownOpen && (
               <div className="pl-4 mt-1 space-y-1">
                 <Link
                   to="/ai-apps"
@@ -148,7 +156,12 @@ const Navbar = () => {
                   AI Apps We Build
                 </Link>
               </div>
-            )}
+            )} */}
+          </li>
+          <li>
+            <Link to="/our-porjects" className={`block ${linkClass("/about")}`}>
+              Our Project
+            </Link>
           </li>
         </ul>
       )}

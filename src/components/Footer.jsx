@@ -3,6 +3,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaPinterest,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -26,18 +27,18 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="/" className="hover:text-white transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Courses
+                <a href="/about" className="hover:text-white transition">
+                  About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Workshops
+                <a href="/ai-solution-and-product" className="hover:text-white transition">
+                  Ai Solutions
                 </a>
               </li>
               <li>
@@ -51,9 +52,12 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-sm text-gray-300">📧 support@risezonic.com</p>
-            <p className="text-sm text-gray-300">📞 +91 9876543210</p>
-            <p className="text-sm text-gray-300">📍 Delhi, India</p>
+            <p className="text-sm text-gray-300">📧 info@risezonic.com</p>
+            <p className="text-sm text-gray-300">📞 +91 8178857250</p>
+            <p className="text-sm text-gray-300">
+              📍 Risezonic : RZ11/D, Upper Ground Floor Opposite Palam Metro
+              Station Gate No 3, Palam Dwarka Road, Delhi, 110045
+            </p>
           </div>
 
           {/* Social Media */}
@@ -61,25 +65,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect with Us</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/risezonicofficial/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaFacebookF />
               </a>
               <a
-                href="#"
+                href="https://in.pinterest.com/risezonicllp/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
-                <FaTwitter />
+                <FaPinterest />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/risezonicofficial/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaInstagram />
               </a>
               <a
-                href="#"
+                href="https://in.linkedin.com/company/risezonic"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaLinkedinIn />
