@@ -7,7 +7,7 @@ import {
   FaLightbulb,
   FaEye,
 } from "react-icons/fa";
-import React from "react";
+import React, { useEffect } from "react";
 const About = () => {
   const texts = React.useMemo(() => ["About AI.Risezonic"], []);
   const [displayedText, setDisplayedText] = React.useState("");
@@ -42,6 +42,9 @@ const About = () => {
 
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex, texts]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       className="font-sans text-gray-800"

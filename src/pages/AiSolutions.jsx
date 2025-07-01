@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaRobot,
   FaLaptopCode,
@@ -8,6 +8,9 @@ import {
 import { Link } from "react-router-dom";
 
 const AiSolutions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       className="font-sans text-gray-00 pt-[62px]"
@@ -141,7 +144,8 @@ const AiSolutions = () => {
                 ))}
               </ul>
               <Link>
-              <button></button></Link>
+                <button></button>
+              </Link>
             </div>
           ))}
         </div>

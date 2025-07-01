@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const bgimag =
   "https://www.okoone.com/wp-content/uploads/2024/11/Marketing-Growth-207.jpg"; // Replace with your image URL
@@ -30,7 +30,9 @@ export default function ContactUs() {
       message: "",
     });
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       style={{

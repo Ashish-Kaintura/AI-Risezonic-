@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero";
 import {
   FaProjectDiagram,
@@ -14,6 +14,9 @@ import {
 } from "react-icons/fa";
 import Testimonials from "../components/Testimonials";
 const Home = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div
       className="space-y-16"

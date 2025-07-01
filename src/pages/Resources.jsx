@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCalendarAlt, FaUser, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -70,6 +70,9 @@ const ResourcesCard = ({ post }) => (
 );
 
 const Resources = () => {
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="pt-24 px-6 md:px-12 max-w-7xl mx-auto font-sans text-gray-800 bg-gray-50 py-16">
       {/* Header */}
