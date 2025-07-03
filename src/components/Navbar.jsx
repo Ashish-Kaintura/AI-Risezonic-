@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
-import { FaRobot, FaChalkboardTeacher, FaLightbulb } from "react-icons/fa";
-
+import {
+  FaRobot,
+  FaChalkboardTeacher,
+  FaLightbulb,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FiMail, FiPhone } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -14,48 +26,113 @@ const Navbar = () => {
       : "text-gray-700 hover:text-blue-600";
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 font-sans">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold text-blue-600">
-          <img
-            className="w-48"
-            src="https://i.postimg.cc/jqPQ0qjd/Whats-App-Image-2025-06-27-at-3-38-13-PM-removebg-preview.png"
-            alt="Logo"
-          />
-        </Link>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
+    <header className="fixed top-0 left-0 w-full z-50 ">
+      {" "}
+      <div
+        className="bg-gradient-to-r from-pink-700 via-pink-600 to-blue-700 text-white text-sm px-4 py-5 md:flex hidden flex-wrap justify-around items-center"
+        style={{ minHeight: "40px" }}
+      >
+        <div className="flex items-center space-x-3">
+          <span className="font-medium tracking-wide">Follow us:</span>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-300 transition-colors"
+          >
+            <FaFacebookF size={27} />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-300 transition-colors"
+          >
+            <FaLinkedinIn size={27} />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-300 transition-colors"
+          >
+            <FaInstagram size={27} />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition-colors"
+          >
+            <FaTwitter size={27} />
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-400 transition-colors"
+          >
+            <FaYoutube size={27} />
+          </a>
         </div>
-        <ul className="hidden md:flex space-x-6 items-center">
-          <li>
-            <Link to="/" className={linkClass("/")}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className={linkClass("/about")}>
-              About
-            </Link>
-          </li>
+        <div className="flex items-center space-x-6 text-sm flex-wrap">
+          <div className="flex items-center space-x-2">
+            <FaWhatsapp size={27} className="text-gray-200" />
+            <span className="hidden sm:inline">WhatsApp:</span>
+            <span className="font-semibold">+91 8178857250</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <FiPhone size={27} className="text-blue-200" />
+            <span className="font-semibold">+91 8178857250</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <FiMail size={27} className="text-gray-200" />
+            <span className="font-semibold">info@cimagecollege.com</span>
+          </div>
+        </div>
+      </div>
+      <nav className="bg-white shadow-md  font-sans">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+          <Link to="/" className="text-xl font-bold text-blue-600">
+            <img
+              className="w-48"
+              src="https://i.postimg.cc/jqPQ0qjd/Whats-App-Image-2025-06-27-at-3-38-13-PM-removebg-preview.png"
+              alt="Logo"
+            />
+          </Link>
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
+          <ul className="hidden md:flex space-x-6 items-center">
+            <li>
+              <Link to="/" className={linkClass("/")}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={linkClass("/about")}>
+                About
+              </Link>
+            </li>
 
-          <li className="relative group">
-            <Link
-              to="/ai-solution-and-product"
-              className={linkClass("/ai-solution-and-product")}
-            >
-              {" "}
-              <button
-                className="flex items-center gap-1  hover:text-blue-600 focus:outline-none"
-                onClick={() => setDropdownOpen((open) => !open)}
-                onBlur={() => setDropdownOpen(false)}
+            <li className="relative group">
+              <Link
+                to="/ai-solution-and-product"
+                className={linkClass("/ai-solution-and-product")}
               >
-                AI Solutions & Products
-                {/* <FiChevronDown className="mr-1" /> */}
-              </button>
-            </Link>
-            {/* <div
+                {" "}
+                <button
+                  className="flex items-center gap-1  hover:text-blue-600 focus:outline-none"
+                  onClick={() => setDropdownOpen((open) => !open)}
+                  onBlur={() => setDropdownOpen(false)}
+                >
+                  AI Solutions & Products
+                  {/* <FiChevronDown className="mr-1" /> */}
+                </button>
+              </Link>
+              {/* <div
               className={`absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50 ${
                 dropdownOpen ? "block" : "hidden"
               } group-hover:block`}
@@ -90,43 +167,49 @@ const Navbar = () => {
                 Consulting for Institutions
               </Link>
             </div> */}
-          </li>
-          <li>
-            <Link to="/our-porjects" className={linkClass("/our-porjects")}>
-              Our Project
-            </Link>
-          </li>
-          <li>
-            <Link to="/resources" className={linkClass("/resources")}>
-              Resources
-            </Link>
-          </li>
-        </ul>
-      </div>
-      {isOpen && (
-        <ul className="md:hidden px-4 pb-4 space-y-2 bg-white">
-          <li>
-            <Link to="/" className={`block ${linkClass("/")}`}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className={`block ${linkClass("/about")}`}>
-              About
-            </Link>
-          </li>
-
-          <li>
-            <button
-              className="flex items-center w-full text-left text-gray-700 hover:text-blue-600 focus:outline-none "
-              onClick={() => setDropdownOpen((open) => !open)}
-            >
-              <Link to="/ai-solution-and-product">
-                {/* <FiChevronDown className="mr-1" /> */}
-                AI Solutions & Products
+            </li>
+            <li>
+              <Link to="/our-porjects" className={linkClass("/our-porjects")}>
+                Our Project
               </Link>
-            </button>
-            {/* {dropdownOpen && (
+            </li>
+            <li>
+              <Link to="/resources" className={linkClass("/resources")}>
+                Resources
+              </Link>
+            </li>
+          </ul>
+          <Link
+            to=""
+            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+          >
+            Apply Now
+          </Link>
+        </div>
+        {isOpen && (
+          <ul className="md:hidden px-4 pb-4 space-y-2 bg-white">
+            <li>
+              <Link to="/" className={`block ${linkClass("/")}`}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={`block ${linkClass("/about")}`}>
+                About
+              </Link>
+            </li>
+
+            <li>
+              <button
+                className="flex items-center w-full text-left text-gray-700 hover:text-blue-600 focus:outline-none "
+                onClick={() => setDropdownOpen((open) => !open)}
+              >
+                <Link to="/ai-solution-and-product">
+                  {/* <FiChevronDown className="mr-1" /> */}
+                  AI Solutions & Products
+                </Link>
+              </button>
+              {/* {dropdownOpen && (
               <div className="pl-4 mt-1 space-y-1">
                 <Link
                   to="/ai-apps"
@@ -165,33 +248,34 @@ const Navbar = () => {
                 </Link>
               </div>
             )} */}
-          </li>
-          <li>
-            <Link
-              to="/our-porjects"
-              className={`block ${linkClass("/our-porjects")}`}
-            >
-              Our Project
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className={`block ${linkClass("/contact")}`}>
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className={`block ${linkClass("/about")}`}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/resources" className={linkClass("/resources")}>
-              Resources
-            </Link>
-          </li>
-        </ul>
-      )}
-    </nav>
+            </li>
+            <li>
+              <Link
+                to="/our-porjects"
+                className={`block ${linkClass("/our-porjects")}`}
+              >
+                Our Project
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className={`block ${linkClass("/contact")}`}>
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className={`block ${linkClass("/about")}`}>
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/resources" className={linkClass("/resources")}>
+                Resources
+              </Link>
+            </li>
+          </ul>
+        )}
+      </nav>
+    </header>
   );
 };
 
