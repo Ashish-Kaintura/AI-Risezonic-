@@ -14,7 +14,8 @@ import OurProjects from "./pages/OurProjects";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
-
+import WhatsAppSticky from "./components/WhatsAppSticky";
+import PopupForm from "./components/PopupForm";
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -36,6 +37,8 @@ const App = () => {
           <Route path="/blogs" element={<Blog />} />
         </Routes>
       </main>
+      <WhatsAppSticky />
+      <PopupForm />
       <Footer />
     </div>
   );

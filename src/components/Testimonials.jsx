@@ -2,7 +2,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const Testimonials = () => {
   return (
-    <section className="max-w-7xl mx-auto bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 py-16 px-6 md:px-12 rounded-lg shadow-lg">
+    <section className=" mx-auto bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 py-16 px-6 md:px-12 rounded-lg shadow-lg">
       <h2
         className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
         data-aos="fade-up"

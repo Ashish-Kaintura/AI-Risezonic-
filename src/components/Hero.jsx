@@ -39,7 +39,7 @@ const Hero = () => {
   }, [charIndex, isDeleting, textIndex, texts]);
 
   return (
-    <section className="relative rounded-lg shadow-xl overflow-hidden pt-28 h-[650px] items-center">
+    <section className="relative rounded-lg shadow-xl overflow-hidden pt-28 h-[750px] items-center">
       {/* Animated background */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full animate-gradient bg-[linear-gradient(270deg,#60a5fa,#a7f3d0,#f472b6,#60a5fa)] bg-[length:400%_400%] opacity-80 blur-sm"></div>

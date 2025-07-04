@@ -15,7 +15,9 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { useFormPopup } from "../context/FormContext";
 const Navbar = () => {
+  const { openForm } = useFormPopup();
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
@@ -96,7 +98,7 @@ const Navbar = () => {
           <Link to="/" className="text-xl font-bold text-blue-600">
             <img
               className="w-48"
-              src="https://i.postimg.cc/jqPQ0qjd/Whats-App-Image-2025-06-27-at-3-38-13-PM-removebg-preview.png"
+              src="https://i.postimg.cc/qqtCN8Gg/Whats-App-Image-2025-06-27-at-3-38-13-PM-removebg-preview.png"
               alt="Logo"
             />
           </Link>
@@ -174,12 +176,12 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <Link
-            to=""
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+          <button
+            onClick={openForm}
+            className="hidden md:flex px-8 py-3 bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
           >
-            Apply Now
-          </Link>
+            Contact Us
+          </button>
         </div>
         {isOpen && (
           <ul className="md:hidden px-4 pb-4 space-y-2 bg-white">

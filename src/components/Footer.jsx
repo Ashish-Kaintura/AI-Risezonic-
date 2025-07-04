@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaPinterest,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div>
-            <h3 className="text-2xl font-bold mb-2">AI.Risezonic</h3>
+            <h3 className="text-2xl font-bold mb-2">AIRisezonic</h3>
             <p className="text-sm text-gray-200">
               Shaping the future with AI-driven learning and innovation.
             </p>
@@ -37,13 +38,21 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/ai-solution-and-product" className="hover:text-white transition">
+                <a
+                  href="/ai-solution-and-product"
+                  className="hover:text-white transition"
+                >
                   Ai Solutions
                 </a>
               </li>
               <li>
                 <a href="/contact" className="hover:text-white transition">
                   Contact
+                </a>
+              </li>
+              <li>
+                <a href="/blogs" className="hover:text-white transition">
+                  Blog
                 </a>
               </li>
             </ul>
@@ -58,36 +67,44 @@ const Footer = () => {
               📍 Risezonic : RZ11/D, Upper Ground Floor Opposite Palam Metro
               Station Gate No 3, Palam Dwarka Road, Delhi, 110045
             </p>
+            <p className="text-sm text-gray-300">
+              📍 Risezonic - Awfis, 07th Floor, Gate No 3 & 4, Ambience Island
+              DLF Phase 3, NH-8, Gurugram, Haryana 122002
+            </p>
           </div>
 
           {/* Social Media */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect with Us</h4>
             <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/risezonicofficial/"
+              <Link
+                target="_blank"
+                to="https://www.facebook.com/risezonicofficial/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaFacebookF />
-              </a>
-              <a
-                href="https://in.pinterest.com/risezonicllp/"
+              </Link>
+              <Link
+                target="_blank"
+                to="https://in.pinterest.com/risezonicllp/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaPinterest />
-              </a>
-              <a
-                href="https://www.instagram.com/risezonicofficial/"
+              </Link>
+              <Link
+                target="_blank"
+                to="https://www.instagram.com/risezonicofficial/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaInstagram />
-              </a>
-              <a
-                href="https://in.linkedin.com/company/risezonic"
+              </Link>
+              <Link
+                target="_blank"
+                to="https://in.linkedin.com/company/risezonic"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
               >
                 <FaLinkedinIn />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
