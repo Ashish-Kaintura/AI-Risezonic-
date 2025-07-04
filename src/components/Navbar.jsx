@@ -87,7 +87,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <FiMail size={27} className="text-gray-200" />
-            <span className="font-semibold">info@cimagecollege.com</span>
+            <span className="font-semibold">info@risezonic.com</span>
           </div>
         </div>
       </div>
@@ -106,11 +106,6 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="hidden md:flex space-x-6 items-center">
-            <li>
-              <Link to="/" className={linkClass("/")}>
-                Home
-              </Link>
-            </li>
             <li>
               <Link to="/about" className={linkClass("/about")}>
                 About

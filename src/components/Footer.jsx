@@ -94,7 +94,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-300">
-          © {new Date().getFullYear()} AI.Risezonic. All rights reserved.
+          © {new Date().getFullYear()} Risezonic Group. All rights reserved.
         </div>
       </div>
     </footer>
