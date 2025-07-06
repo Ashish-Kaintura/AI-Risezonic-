@@ -48,6 +48,12 @@ const PopupForm = () => {
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500"
             required
           />
+           <input
+            type="tel"
+            placeholder="Your Number"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500"
+            required
+          />
           <textarea
             placeholder="Your Message"
             rows="4"

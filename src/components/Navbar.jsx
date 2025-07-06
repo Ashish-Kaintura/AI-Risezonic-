@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-3">
           <span className="font-medium tracking-wide">Follow us:</span>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/risezonicofficial/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-300 transition-colors"
@@ -45,7 +45,7 @@ const Navbar = () => {
             <FaFacebookF size={27} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://in.linkedin.com/company/risezonic"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-300 transition-colors"
@@ -53,7 +53,7 @@ const Navbar = () => {
             <FaLinkedinIn size={27} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/accounts/login/?next=%2Frisezonicofficial%2F&source=omni_redirect"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-300 transition-colors"
@@ -260,7 +260,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className={`block ${linkClass("/about")}`}>
+              <Link to="/blogs" className={`block ${linkClass("/blogs")}`}>
                 Blog
               </Link>
             </li>

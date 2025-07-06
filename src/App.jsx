@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import WhatsAppSticky from "./components/WhatsAppSticky";
 import PopupForm from "./components/PopupForm";
+import BlogDetail from "./pages/BlogDetail";
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
       </main>
       <WhatsAppSticky />

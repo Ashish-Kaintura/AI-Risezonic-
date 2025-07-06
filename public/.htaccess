@@ -1,11 +1,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # Don't rewrite requests for actual files or directories
+  RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-
-  # Rewrite everything else to index.html
-  RewriteRule ^.*$ /index.html [L]
+  RewriteRule . /index.html [L]
 </IfModule>

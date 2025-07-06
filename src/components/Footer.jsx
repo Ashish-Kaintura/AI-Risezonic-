@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div>
-            <h3 className="text-2xl font-bold mb-2">AIRisezonic</h3>
+            <h3 className="text-2xl font-bold mb-2">AI.Risezonic</h3>
             <p className="text-sm text-gray-200">
               Shaping the future with AI-driven learning and innovation.
             </p>

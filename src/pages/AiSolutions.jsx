@@ -6,7 +6,7 @@ import {
   FaUniversity,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import WelcomeSection from "../components/WelcomeSection";
 const AiSolutions = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,7 +21,7 @@ const AiSolutions = () => {
     >
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-white text-center overflow-hidden"
+        className="relative h-[70vh] bg-cover bg-center flex items-center justify-center text-white text-center overflow-hidden sm:mt-[86px]"
         style={{
           backgroundImage:
             "url('https://t4.ftcdn.net/jpg/08/84/99/81/360_F_884998169_tBj5tPnoqJyV2jqCvWioWe77ciNzFcy9.jpg')",
@@ -71,99 +71,248 @@ const AiSolutions = () => {
         </div>
       </section>
 
-      {/* Card View Section */}
-      <section className="max-w-7xl mx-auto py-20 px-6 md:px-12">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Card Template */}
-          {[
-            {
-              icon: <FaLaptopCode />,
-              title: "AI Apps We Build",
-              color: "from-blue-500 to-indigo-600",
-              points: [
-                "🎙️ Chatbots with memory and role",
-                "📄 Document Q&A (PDF, DOCX, CSV)",
-                "📚 AI Tutors for LMS and college portals",
-                "🧠 Custom RAG pipelines with low latency",
-                "🧮 Voice + Chat Calculators",
-                "🌐 Websites with embedded GenAI bots",
-              ],
-              link: "",
-            },
-            {
-              icon: <FaBookOpen />,
-              title: "AI in Education",
-              color: "from-purple-500 to-pink-500",
-              points: [
-                "📝 Smart AI Assessments (auto-evaluation, feedback)",
-                "🗣️ Adaptive Learning Chatbots",
-                "🧾 Essay Evaluators with GenAI",
-                "🎓 LMS Assistant (like ChatGPT for your syllabus)",
-              ],
-              link: "",
-            },
-            {
-              icon: <FaRobot />,
-              title: "Robotics + AI",
-              color: "from-green-500 to-emerald-500",
-              points: [
-                "🤖 Voice Controlled Robot (4 Direction + Q&A)",
-                "🚁 AI Drone for Classroom + Surveillance",
-                "📡 IoT Projects + AI integration",
-              ],
-              link: "",
-            },
-            {
-              icon: <FaUniversity />,
-              title: "Consulting for Institutions",
-              color: "from-red-500 to-yellow-500",
-              points: [
-                "🧪 Setup GenAI Labs",
-                "📘 Design your AI curriculum",
-                "⚙️ Embed AI in your academic workflow",
-              ],
-              link: "",
-            },
-          ].map((card, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-100"
-              data-aos="fade-up"
-            >
-              <div
-                className={`w-14 h-14 rounded-full bg-gradient-to-br ${card.color} flex items-center justify-center text-white text-2xl mb-4`}
-              >
-                {card.icon}
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                {card.title}
-              </h2>
-              <ul className="text-gray-700 text-sm space-y-2 list-disc list-inside">
-                {card.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-              <Link>
-                <button></button>
-              </Link>
-            </div>
-          ))}
+      <section className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-20 px-4 md:px-12">
+        <div className="max-w-7xl mx-auto text-center" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">
+            💡 Software & AI Products
+          </h2>
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed">
+            At <span className="text-pink-600 font-semibold">AI.Risezonic</span>
+            , we craft intelligent systems that work for you.
+            <br className="hidden md:block" />
+            Forget bulky ERPs and dashboards no one opens. Our AI-native tools
+            understand your domain, speak your language, and automate 90% of
+            your manual tasks—so your team can focus on what matters.
+          </p>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-16">
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition text-base"
+        {/* Product Grid */}
+        <div>
+          <h3 className="text-2xl font-bold text-blue-700 mb-8 text-center">
+            Our Core AI Product Suite
+          </h3>
+          <div
+            className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
-            📞 Book a Call
-          </a>
-          <a
-            href="/case-study"
-            className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition text-base"
+            {[
+              {
+                title: "Custom GPT Platform",
+                desc: "Your private, domain-specific AI trained on your documents, tone, and workflows.",
+                highlights: [
+                  "Acts like your AI teammate",
+                  "Remembers your language and decisions",
+                  "Works for Principals, Startups, Students",
+                ],
+                color: "from-blue-100 to-blue-50",
+              },
+              {
+                title: "AI Document Assistant",
+                desc: "Upload PDFs and get precise answers using RAG-powered search.",
+                highlights: [
+                  "Support in Hindi + English",
+                  "Instant answers with citations",
+                  "Ideal for Admins, HR, Students",
+                ],
+                color: "from-pink-100 to-pink-50",
+              },
+              {
+                title: "AI Department Assistants",
+                desc: "Smart 24/7 bots for Admission, Fees, Exams, Support.",
+                highlights: [
+                  "WhatsApp + Website Integration",
+                  "Trained on your FAQs & Policies",
+                  "90% query resolution rate",
+                ],
+                color: "from-yellow-100 to-yellow-50",
+              },
+              {
+                title: "AI Tutor with Personalized Learning",
+                desc: "A tutor that understands your syllabus, learning pace, and language.",
+                highlights: [
+                  "Explain complex topics in simple terms",
+                  "Generate quizzes, viva questions",
+                  "Context-aware assistance",
+                ],
+                color: "from-green-100 to-green-50",
+              },
+              {
+                title: "Smart Report Generator (AI Analyst)",
+                desc: "Turn raw data (Excel, CSV) into charts, insights, and summaries.",
+                highlights: [
+                  "Ask: Which class had lowest attendance?",
+                  "AI auto-generates visual analytics",
+                  "Save hours every week",
+                ],
+                color: "from-indigo-100 to-indigo-50",
+              },
+              {
+                title: "VoiceBot with Reasoning",
+                desc: "Speak in Hindi or English and get real answers or actions.",
+                highlights: [
+                  "Smart Kiosk & Robot control ready",
+                  "Voice + LLM + Real Action",
+                  "Used in Robotics Labs & Smart Desks",
+                ],
+                color: "from-purple-100 to-purple-50",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`bg-gradient-to-br ${item.color} rounded-2xl shadow-lg p-7 border border-blue-100 hover:shadow-2xl transition group`}
+              >
+                <h4 className="text-lg font-bold text-blue-900 mb-2 group-hover:text-pink-600 transition">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 mb-4">{item.desc}</p>
+                <ul className="list-disc list-inside text-sm text-blue-700 space-y-1 text-left pl-2">
+                  {item.highlights.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-24 px-6 md:px-16">
+        {/* Custom Modules */}
+        <div
+          className="mt-20 max-w-5xl mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3 className="text-3xl md:text-4xl font-extrabold text-blue-800 mb-4 flex items-center justify-center gap-2">
+            <span className="inline-block bg-blue-100 rounded-full p-2 shadow-md">
+              <FaLaptopCode className="text-blue-600 text-2xl" />
+            </span>
+            Custom AI Add-ons
+          </h3>
+          <p className="text-gray-700 mb-8 text-lg max-w-2xl mx-auto">
+            Supercharge your workflows with modular AI tools, tailored for your
+            campus or business. Integrate with APIs, dashboards, or full-stack
+            solutions—no extra hassle.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              {
+                name: "Auto Circular Writer (Principal GPT)",
+                icon: <FaBookOpen className="text-pink-500" />,
+              },
+              {
+                name: "Attendance Insight GPT",
+                icon: <FaUniversity className="text-blue-500" />,
+              },
+              {
+                name: "AI-Powered Question Generator",
+                icon: <FaRobot className="text-yellow-500" />,
+              },
+              {
+                name: "Project Idea Recommender",
+                icon: <FaLaptopCode className="text-green-500" />,
+              },
+              {
+                name: "Student Performance Predictor",
+                icon: <FaBookOpen className="text-indigo-500" />,
+              },
+              {
+                name: "Internal Q&A Portal",
+                icon: <FaUniversity className="text-purple-500" />,
+              },
+              {
+                name: "Feedback Sentiment Analyzer",
+                icon: <FaRobot className="text-pink-600" />,
+              },
+              {
+                name: "RAG for University Notices",
+                icon: <FaBookOpen className="text-blue-600" />,
+              },
+            ].map((mod, i) => (
+              <span
+                key={i}
+                className="flex items-center gap-2 bg-white border border-blue-200 shadow hover:shadow-lg px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 hover:bg-blue-50"
+              >
+                <span>{mod.icon}</span>
+                {mod.name}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div
+          className="mt-20 max-w-6xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center flex items-center justify-center gap-2">
+            <span className="inline-block bg-blue-100 rounded-full p-2 shadow">
+              🧩
+            </span>
+            What Makes Us Different?
+          </h3>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow bg-white">
+            <table className="min-w-full text-sm text-left">
+              <thead>
+                <tr className="bg-blue-100 text-blue-900 text-base">
+                  <th className="px-4 py-3 font-bold">Feature</th>
+                  <th className="px-4 py-3 font-bold">AI.Risezonic</th>
+                  <th className="px-4 py-3 font-bold">Traditional Software</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Works in Natural Language", "✅ Yes", "❌ Form-based"],
+                  [
+                    "Context-aware Memory",
+                    "✅ LangChain Enabled",
+                    "❌ Stateless Logic",
+                  ],
+                  [
+                    "Personalization",
+                    "✅ Trained on Your Tone",
+                    "❌ Generic Workflows",
+                  ],
+                  ["Voice + Text + Docs", "✅ Multimodal", "❌ Text Only"],
+                  ["Deployment Time", "✅ 7 Days", "❌ 3–6 Months"],
+                  ["Hindi Language Support", "✅ Yes", "❌ English Only"],
+                  [
+                    "AI Debug & Trace",
+                    "✅ Langfuse Observability",
+                    "❌ Not Available",
+                  ],
+                ].map(([feature, ours, theirs], i) => (
+                  <tr key={i} className="border-t hover:bg-blue-50 transition">
+                    <td className="px-4 py-3 font-medium">{feature}</td>
+                    <td className="px-4 py-3 text-green-600 font-semibold">
+                      {ours}
+                    </td>
+                    <td className="px-4 py-3 text-red-500 font-semibold">
+                      {theirs}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          className="mt-20 max-w-3xl mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <h3 className="text-3xl font-bold text-blue-800 mb-4">
+            💬 Let's Talk AI
+          </h3>
+          <p className="text-gray-700 text-lg mb-6">
+            Want a GPT that talks like your college? A smart tutor for your
+            students? A robot that teaches?
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-pink-600 text-white px-6 py-3 rounded-full shadow hover:bg-pink-700 transition"
           >
-            📂 See Case Study
-          </a>
+            Contact Us → Let's Build Together
+          </Link>
         </div>
       </section>
     </div>

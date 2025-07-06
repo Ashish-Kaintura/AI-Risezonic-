@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const Hero = () => {
   // Typing animation logic
-  const texts = React.useMemo(() => ["AIRisezonic"], []);
+  const texts = React.useMemo(() => ["AI.Risezonic"], []);
   const [displayedText, setDisplayedText] = React.useState("");
   const [textIndex, setTextIndex] = React.useState(0);
   const [charIndex, setCharIndex] = React.useState(0);
