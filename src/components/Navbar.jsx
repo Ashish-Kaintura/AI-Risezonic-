@@ -109,6 +109,11 @@ const Navbar = () => {
           </div>
           <ul className="hidden md:flex space-x-6 items-center">
             <li>
+              <Link to="/" className={linkClass("/")}>
+                Home
+              </Link>
+            </li>
+            <li>
               <Link to="/about" className={linkClass("/about")}>
                 About
               </Link>
@@ -171,8 +176,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/resources" className={linkClass("/resources")}>
-                Resources
+              <Link to="/blogs" className={linkClass("/blogs")}>
+                Blogs
               </Link>
             </li>
           </ul>
@@ -262,11 +267,6 @@ const Navbar = () => {
             <li>
               <Link to="/blogs" className={`block ${linkClass("/blogs")}`}>
                 Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/resources" className={linkClass("/resources")}>
-                Resources
               </Link>
             </li>
           </ul>

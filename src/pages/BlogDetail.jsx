@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import blogs from "../data/blogs.json";
 import { FaRobot } from "react-icons/fa";
 import BlogCard from "../components/BlogCard";
-import { useEffect } from "react";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -14,7 +13,25 @@ const BlogDetail = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Extract video URL if available
+  const videoUrl = blog?.video || blog?.Video;
+
+  // Convert YouTube URL to embeddable format
+  const getYouTubeEmbedURL = (url) => {
+    if (!url) return null;
+    const videoId = url.includes("watch?v=")
+      ? url.split("watch?v=")[1].split("&")[0]
+      : url.includes("youtu.be/")
+      ? url.split("youtu.be/")[1].split("?")[0]
+      : null;
+
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+  };
+
+  const embedUrl = getYouTubeEmbedURL(videoUrl);
+
   if (!blog) return <p className="p-6 text-red-600">Blog not found.</p>;
+
   return (
     <div className="max-w-5xl mx-auto p-6 text-gray-800 pt-48">
       {/* Back Link */}
@@ -24,6 +41,7 @@ const BlogDetail = () => {
       >
         &larr; Back to Blog
       </Link>
+
       {/* Header */}
       <div className="mb-10">
         <div className="flex items-center gap-3 text-indigo-600 text-4xl font-bold mb-2">
@@ -37,12 +55,25 @@ const BlogDetail = () => {
           <span>{blog.readTime}</span>
         </div>
 
-        <img
-          src={blog.coverImage}
-          alt={blog.title}
-          loading="lazy"
-          className="rounded-xl w-full h-64 object-cover mb-6"
-        />
+        {/* Video or Image */}
+        {embedUrl ? (
+          <div className="rounded-xl overflow-hidden mb-6">
+            <iframe
+              src={embedUrl}
+              title={blog.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-64"
+            ></iframe>
+          </div>
+        ) : (
+          <img
+            src={blog.coverImage}
+            alt={blog.title}
+            loading="lazy"
+            className="rounded-xl w-full h-64 object-cover mb-6"
+          />
+        )}
 
         <p className="text-lg text-gray-700 leading-relaxed">{blog.intro}</p>
       </div>

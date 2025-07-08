@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import video1 from "/video/WhatsApp Video 2025-07-07 at 4.55.37 PM.mp4"
 const WelcomeSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -73,7 +73,7 @@ const WelcomeSection = () => {
           {/* Video Section */}
           <div className=" h-48 md:h-56 w-full overflow-hidden">
             <video
-              src="https://media.istockphoto.com/id/2000488090/video/multicoloured-infinity-sign-ai-big-data-finance-technology-or-cloud-technology-concept.mp4?s=mp4-640x640-is&k=20&c=s98Jded0-xTZfbkxeqgC6SdgSmHeFgwtK3Hj8_YoLJs="
+             src={video1}
               className="w-full h-full object-cover"
               autoPlay
               loop
