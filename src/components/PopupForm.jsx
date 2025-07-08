@@ -1,24 +1,63 @@
-import React, { useEffect } from "react";
-import { useFormPopup } from "../context/FormContext"; // ✅
+import React, { useEffect, useState } from "react";
+import { useFormPopup } from "../context/FormContext";
+
+const validateEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+const validatePhone = (phone) =>
+  /^\+?\d{10,15}$/.test(phone.replace(/\s+/g, ""));
 
 const PopupForm = () => {
-  const { isOpen, openForm, closeForm } = useFormPopup(); // ✅ Fix
+  const { isOpen, openForm, closeForm } = useFormPopup();
+
+  const [fields, setFields] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!sessionStorage.getItem("popup_shown")) {
         sessionStorage.setItem("popup_shown", "true");
-        openForm(); // ✅ Will now work
+        openForm();
       }
     }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
 
+  const handleChange = (e) => {
+    setFields({ ...fields, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: undefined });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!fields.name.trim()) newErrors.name = "Name is required";
+    if (!fields.email.trim()) newErrors.email = "Email is required";
+    else if (!validateEmail(fields.email))
+      newErrors.email = "Invalid email address";
+    if (!fields.phone.trim()) newErrors.phone = "Phone is required";
+    else if (!validatePhone(fields.phone))
+      newErrors.phone = "Invalid phone number";
+    if (!fields.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length) {
+      setErrors(validationErrors);
+      return;
+    }
     alert("Form submitted!");
     closeForm();
+    setFields({ name: "", email: "", phone: "", message: "" });
+    setErrors({});
   };
 
   if (!isOpen) return null;
@@ -48,32 +87,72 @@ const PopupForm = () => {
             touch.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-400 outline-none transition"
-            required
-            autoFocus
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-400 outline-none transition"
-            required
-          />
-           <input
-            type="tel"
-            placeholder="Your Number"
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500"
-            required
-          />
-          <textarea
-            placeholder="Your Message"
-            rows="4"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-400 outline-none transition resize-none"
-            required
-          ></textarea>
+        <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className={`w-full px-4 py-3 rounded-xl border ${
+                errors.name ? "border-red-400" : "border-gray-200"
+              } focus:ring-2 focus:ring-blue-400 outline-none transition`}
+              required
+              autoFocus
+              value={fields.name}
+              onChange={handleChange}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+            )}
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className={`w-full px-4 py-3 rounded-xl border ${
+                errors.email ? "border-red-400" : "border-gray-200"
+              } focus:ring-2 focus:ring-blue-400 outline-none transition`}
+              required
+              value={fields.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            )}
+          </div>
+          <div>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Number"
+              className={`w-full px-4 py-3 rounded-lg border ${
+                errors.phone ? "border-red-400" : "border-gray-300"
+              } focus:ring-blue-500`}
+              required
+              value={fields.phone}
+              onChange={handleChange}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+            )}
+          </div>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              className={`w-full px-4 py-3 rounded-xl border ${
+                errors.message ? "border-red-400" : "border-gray-200"
+              } focus:ring-2 focus:ring-blue-400 outline-none transition resize-none`}
+              required
+              value={fields.message}
+              onChange={handleChange}
+            ></textarea>
+            {errors.message && (
+              <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+            )}
+          </div>
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-bold py-3 rounded-xl shadow hover:opacity-90 transition"
