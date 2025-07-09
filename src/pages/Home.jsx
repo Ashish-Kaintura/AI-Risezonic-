@@ -18,6 +18,7 @@ import WhatWeDo from "../components/What We Do ";
 import WhatMakesUsDifferent from "../components/WhatMakesUsDifferent";
 import EcosystemSection from "../components/EcosystemSection";
 import CallToActionSection from "../components/CallToActionSection";
+import TeamSection from "../components/TeamSection";
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,6 +40,7 @@ const Home = () => {
       <WhatMakesUsDifferent />
 
       <EcosystemSection />
+      <TeamSection/>
       {/* Testimonials */}
       {/* <Testimonials /> */}
       {/* Call to Action */}

@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 ">
       {" "}
       <div
-        className="bg-gradient-to-r from-pink-700 via-pink-600 to-blue-700 text-white text-sm px-4 py-5 md:flex hidden flex-wrap justify-around items-center"
+        className="bg-gradient-to-r from-pink-700 via-pink-600 to-blue-700 text-white text-sm px-8 py-5 md:flex hidden flex-wrap justify-between items-center "
         style={{ minHeight: "40px" }}
       >
         <div className="flex items-center space-x-3">
@@ -40,49 +40,49 @@ const Navbar = () => {
             href="https://www.facebook.com/risezonicofficial/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
+            className="hover:text-blue-300  transition-colors bg-blue-600/80 rounded-full w-8 h-8 flex items-center justify-center p-1"
           >
-            <FaFacebookF size={27} />
+            <FaFacebookF size={14} />
           </a>
           <a
             href="https://in.linkedin.com/company/risezonic"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
+            className="hover:text-blue-300 transition-colors bg-blue-800/80 rounded-full w-8 h-8 flex items-center justify-center p-1"
           >
-            <FaLinkedinIn size={27} />
+            <FaLinkedinIn size={14} />
           </a>
           <a
             href="https://www.instagram.com/accounts/login/?next=%2Frisezonicofficial%2F&source=omni_redirect"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-300 transition-colors"
+            className="hover:text-pink-300 transition-colors bg-pink-700/80 rounded-full w-8 h-8 flex items-center justify-center p-1"
           >
-            <FaInstagram size={27} />
+            <FaInstagram size={14} />
           </a>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors"
+            className="hover:text-blue-400 transition-colors bg-blue-500/80 rounded-full w-8 h-8 flex items-center justify-center p-1"
           >
-            <FaTwitter size={27} />
+            <FaTwitter size={14} />
           </a>
           <a
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-red-400 transition-colors"
+            className="hover:text-red-400 transition-colors bg-red-600/80 rounded-full w-8 h-8 flex items-center justify-center p-1"
           >
-            <FaYoutube size={27} />
+            <FaYoutube size={14} />
           </a>
         </div>
         <div className="flex items-center space-x-6 text-sm flex-wrap">
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <FaWhatsapp size={27} className="text-gray-200" />
             <span className="hidden sm:inline">WhatsApp:</span>
             <span className="font-semibold">+91 8178857250</span>
-          </div>
+          </div> */}
           <div className="flex items-center space-x-2">
             <FiPhone size={27} className="text-blue-200" />
             <span className="font-semibold">+91 8178857250</span>
@@ -180,6 +180,14 @@ const Navbar = () => {
                 Blogs
               </Link>
             </li>
+            <li>
+              <Link
+                to="/painpoint"
+                className={`block ${linkClass("/painpoint")}`}
+              >
+                PainPointForm
+              </Link>
+            </li>
           </ul>
           <button
             onClick={openForm}
@@ -257,6 +265,14 @@ const Navbar = () => {
                 className={`block ${linkClass("/our-porjects")}`}
               >
                 Our Project
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/pinpoint"
+                className={`block ${linkClass("/pinpoint")}`}
+              >
+                PinPointForm
               </Link>
             </li>
             <li>

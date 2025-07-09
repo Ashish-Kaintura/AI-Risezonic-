@@ -17,6 +17,8 @@ import Resources from "./pages/Resources";
 import WhatsAppSticky from "./components/WhatsAppSticky";
 import PopupForm from "./components/PopupForm";
 import BlogDetail from "./pages/BlogDetail";
+import PinpointForm from "./pages/PainpointForm";
+import PainpointForm from "./pages/PainpointForm";
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -37,6 +39,7 @@ const App = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/painpoint" element={<PainpointForm/>  } />
         </Routes>
       </main>
       <WhatsAppSticky />

@@ -100,7 +100,7 @@ const About = () => {
       {/* Who We Are */}
       <section
         className="max-w-7xl mx-auto py-20 px-6 md:px-12 bg-white my-4 shadow-xl rounded-xl"
-        data-aos="fade-up"
+        data-aos="zoom-in"
       >
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -554,7 +554,7 @@ const About = () => {
               <FaEnvelope className="text-blue-600 text-2xl" />
               <div>
                 <h4 className="text-sm text-blue-800 font-semibold">Email</h4>
-                <p className="text-gray-600 text-sm">contact@risezonic.ai</p>
+                <p className="text-gray-600 text-sm">info.risezonic.com</p>
               </div>
             </div>
 
@@ -567,7 +567,7 @@ const About = () => {
               <FaPhone className="text-blue-600 text-2xl" />
               <div>
                 <h4 className="text-sm text-blue-800 font-semibold">Phone</h4>
-                <p className="text-gray-600 text-sm">+91-XXXXXXXXXX</p>
+                <p className="text-gray-600 text-sm">+91 8178857250</p>
               </div>
             </div>
 
@@ -582,7 +582,7 @@ const About = () => {
                 <h4 className="text-sm text-blue-800 font-semibold">
                   Location
                 </h4>
-                <p className="text-gray-600 text-sm">Lucknow, India</p>
+                <p className="text-gray-600 text-sm">India: Delhi.Gurugram</p>
               </div>
             </div>
           </div>

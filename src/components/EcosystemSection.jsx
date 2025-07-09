@@ -11,7 +11,7 @@ const EcosystemSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
-
+// https://postimg.cc/gallery/NGfsxX7
   const steps = [
     {
       title: "Train",
@@ -20,7 +20,7 @@ const EcosystemSection = () => {
       content:
         "Master the fundamentals and advanced tools of Generative AI — applied to your own domain, not just coding. Learn how AI thinks.",
       image:
-        "https://cohere.com/_next/image?url=%2Fabout-assets%2Fabout-cell-blue-desktop.png&w=1920&q=75",
+        "https://i.postimg.cc/tCnTNLY6/Image-3.png",
       bg: "from-blue-500 to-pink-500",
       iconColor: "text-pink-300",
     },
@@ -31,7 +31,7 @@ const EcosystemSection = () => {
       content:
         "Hands-on creation of real tools — for campus, startups, and communities. Learn by building working apps that matter.",
       image:
-        "https://images.indianexpress.com/2025/05/Microsoft-Build-2025.jpg",
+        "https://i.postimg.cc/0ygNWcwB/Image-2.png",
       bg: "from-green-500 to-teal-500",
       iconColor: "text-green-300",
     },
@@ -42,7 +42,7 @@ const EcosystemSection = () => {
       content:
         "Showcase your innovation. Build a strong portfolio. Deliver institution-level value with launch-ready AI tools.",
       image:
-        "https://storage.googleapis.com/gweb-cloudblog-publish/images/16_Google_Cloud_Next_2024.max-2000x2000.jpg",
+        "https://i.postimg.cc/CMJGj4Cp/Image-1-3.png",
       bg: "from-yellow-500 to-orange-500",
       iconColor: "text-yellow-300",
     },
