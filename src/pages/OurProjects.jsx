@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     title: "Legal Document RAG QA System",
-    image: "https://img.icons8.com/clouds/500/legal.png",
+    image: "../../public/image/icons8-timeline-week-100.png",
     tag: "GenAI + Law",
   },
   {
@@ -54,12 +54,12 @@ const studentProjects = [
 const hackathonProjects = [
   {
     title: "GenAI Build Week – August 2025",
-    image: "https://img.icons8.com/clouds/500/bolt.png",
+    image: "../../public/image/GenAI Build Week.png",
     tag: "Hackathon",
   },
   {
     title: "AI in Education Hackathon – Coming Soon",
-    image: "https://img.icons8.com/clouds/500/open-book.png",
+    image: "../../public/image/icons8-ai-in-education-64.png",
     tag: "Upcoming",
   },
 ];

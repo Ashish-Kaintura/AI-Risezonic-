@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useFormPopup } from "../context/FormContext";
 
-const validateEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const validateName = (name) => name.trim().length > 0 && name.trim().length <= 35;
+
+const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const validatePhone = (phone) =>
   /^\+?\d{10,15}$/.test(phone.replace(/\s+/g, ""));
@@ -27,7 +28,7 @@ const PopupForm = () => {
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [openForm]);
 
   const handleChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
@@ -36,7 +37,11 @@ const PopupForm = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!fields.name.trim()) newErrors.name = "Name is required";
+    if (!fields.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (!validateName(fields.name)) {
+      newErrors.name = "Name must be 1-35 characters";
+    }
     if (!fields.email.trim()) newErrors.email = "Email is required";
     else if (!validateEmail(fields.email))
       newErrors.email = "Invalid email address";

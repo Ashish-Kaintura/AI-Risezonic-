@@ -273,7 +273,7 @@ export default function ContactUs() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-semibold py-2 rounded-lg shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                className="w-full bg-gradient-to-r from-pink-600 to-blue-700 hover:from-blue-600 hover:to-pink-700 text-white font-semibold py-2 rounded-lg shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40"
                 disabled={submitted}
               >
                 {submitted ? "Sending..." : "Send Message"}

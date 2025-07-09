@@ -99,7 +99,7 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-sans text-gray-800">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
+          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text py-4 text-transparent mb-3">
             Risezonic Blog
           </h1>
           <p className="text-lg text-gray-600">
