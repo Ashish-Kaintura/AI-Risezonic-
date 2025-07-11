@@ -17,8 +17,8 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import Video1 from "../../public/video/WhatsApp Video 2025-07-09 at 4.14.40 PM.mp4";
-import video2 from "../../public/video/5436899_Coll_wavebreak_People_1920x1080.mp4";
+import Video1 from "../video/WhatsApp Video 2025-07-09 at 4.14.40 PM.mp4";
+import video2 from "../video/5436899_Coll_wavebreak_People_1920x1080.mp4";
 import {
   HiMiniWrenchScrewdriver,
   HiMiniUserGroup,

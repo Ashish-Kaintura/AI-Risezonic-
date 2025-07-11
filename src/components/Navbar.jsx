@@ -170,14 +170,10 @@ const Navbar = () => {
               </Link>
             </div> */}
             </li>
-            <li>
-              <Link to="/our-porjects" className={linkClass("/our-porjects")}>
-                Our Project
-              </Link>
-            </li>
+
             <li>
               <Link to="/blogs" className={linkClass("/blogs")}>
-                Blogs
+                Blog
               </Link>
             </li>
             <li>
@@ -259,14 +255,7 @@ const Navbar = () => {
               </div>
             )} */}
             </li>
-            <li>
-              <Link
-                to="/our-porjects"
-                className={`block ${linkClass("/our-porjects")}`}
-              >
-                Our Project
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="/pinpoint"

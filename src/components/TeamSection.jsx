@@ -28,7 +28,7 @@ const teamMembers = [
     role: "Marketing Head",
   },
   {
-    name: "Gorav",
+    name: "Gaurav",
     image: "https://i.postimg.cc/zD2vWTFV/gorav.jpg",
     role: "Product Manager",
   },

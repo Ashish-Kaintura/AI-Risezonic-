@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import video1 from "/video/WhatsApp Video 2025-07-07 at 4.55.37 PM.mp4"
+import video1 from "../video/WhatsApp Video 2025-07-07 at 4.55.37 PM.mp4"
 const WelcomeSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });

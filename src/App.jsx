@@ -2,7 +2,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,15 +9,16 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import AiSolutions from "./pages/AiSolutions";
-import OurProjects from "./pages/OurProjects";
+// import OurProjects from "./pages/OurProjects";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import WhatsAppSticky from "./components/WhatsAppSticky";
 import PopupForm from "./components/PopupForm";
 import BlogDetail from "./pages/BlogDetail";
-import PinpointForm from "./pages/PainpointForm";
 import PainpointForm from "./pages/PainpointForm";
+import NotFoundPage from "./pages/404Page";
+import ComingSoonPage from "./pages/ComingSoonPage";
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -34,12 +34,14 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-solution-and-product" element={<AiSolutions />} />
-          <Route path="/our-porjects" element={<OurProjects />} />
+          {/* <Route path="/our-porjects" element={<OurProjects />} /> */}
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/painpoint" element={<PainpointForm/>  } />
+          <Route path="/painpoint" element={<PainpointForm />} />
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/book-demo" element={<ComingSoonPage />} />
         </Routes>
       </main>
       <WhatsAppSticky />

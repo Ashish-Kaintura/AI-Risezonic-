@@ -9,8 +9,8 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { useRef,useEffect } from "react";
-
+import { useRef, useEffect } from "react";
+import video1 from "../video/WhatsApp Video 2025-07-07 at 4.55.37 PM.mp4";
 const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const validatePhone = (number) =>
@@ -97,19 +97,44 @@ const PainpointForm = () => {
   }
   return (
     <section
-      className="pt-32 pb-12 bg-center bg-no-repeat bg-cover"
-      style={{
-        backgroundColor: "#fdfdfd",
-        backgroundImage: `url("https://i.postimg.cc/gk5pxXjg/Whats-App-Image-2025-07-08-at-4-59-24-PM.jpg")`,
-      }}
+      className="pt-32 pb-12 relative"
+      style={{ backgroundColor: "#fdfdfd" }}
     >
-      <div className="max-w-2xl mx-auto p-6 mt-12 bg-white shadow-xl rounded-2xl border border-gray-200 bg-center bg-no-repeat bg-cover"
-      style={{backgroundImage:`url("https://i.postimg.cc/gk5pxXjg/Whats-App-Image-2025-07-08-at-4-59-24-PM.jpg")` }}>
-        <h2 className="text-4xl font-bold mb-6 text-center text-pink-500 flex items-center justify-center gap-2">
-          <FaThumbtack className="inline text-pink-700" size={36} />
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ minHeight: "100%", minWidth: "100%" }}
+      >
+        <source src={video1} type="video/mp4" />
+        {/* Fallback image if video not supported */}
+        Your browser does not support the video tag.
+      </video>
+      {/* Overlay to dim video for readability */}
+      <div className="absolute inset-0 bg-white bg-opacity-70 z-10"></div>
+
+      <div
+        className="relative z-20 max-w-2xl mx-auto p-6 mt-12 bg-white shadow-xl rounded-2xl border border-gray-200"
+        style={{
+          backgroundImage:
+            "url('https://img.freepik.com/premium-vector/ai-chip-circuit-board-technology-background-cpu-processor-tech-bg-computer-microchip_3482-14990.jpg?semt=ais_hybrid&w=740')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backdropFilter: "blur(10px)",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+          borderRadius: "1.5rem",
+
+        }}
+      >
+        <h2 className="text-4xl font-bold mb-6 text-center text-blue-500 flex items-center justify-center gap-2">
+          <FaThumbtack className="inline text-blue-700" size={36} />
           Painpoint Your Need
         </h2>
-        <p className="text-center text-gray-500 mb-8">
+        <p className="text-center text-gray-600 mb-8">
           Tell us exactly what you need in your industry — and we’ll draft a
           custom AI solution for you.
         </p>
@@ -123,7 +148,7 @@ const PainpointForm = () => {
           {/* Step 1 */}
           <div>
             <p className="text-lg font-semibold mb-1 flex items-center gap-2">
-              <FaIndustry className="inline text-pink-500" /> Choose Your
+              <FaIndustry className="inline text-blue-500" /> Choose Your
               Industry
             </p>
             <select
@@ -152,7 +177,7 @@ const PainpointForm = () => {
           {/* Step 2 */}
           <div>
             <p className="text-lg font-semibold mb-1 flex items-center gap-2">
-              <FaRegCommentDots className="inline text-pink-500" /> Describe
+              <FaRegCommentDots className="inline text-blue-500" /> Describe
               Your Problem or Goal
             </p>
             <textarea
@@ -174,7 +199,7 @@ const PainpointForm = () => {
           {/* Step 3 */}
           <div>
             <p className="text-lg font-semibold mb-1 flex items-center gap-2">
-              <FaUser className="inline text-pink-500" /> Your Contact Details
+              <FaUser className="inline text-blue-500" /> Your Contact Details
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="relative">

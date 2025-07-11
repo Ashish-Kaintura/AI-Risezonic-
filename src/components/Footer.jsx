@@ -42,7 +42,7 @@ const Footer = () => {
                   href="/ai-solution-and-product"
                   className="hover:text-white transition"
                 >
-                  Ai Solutions
+                  AI Solutions
                 </a>
               </li>
               <li>

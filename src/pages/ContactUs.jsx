@@ -191,6 +191,7 @@ export default function ContactUs() {
                   type="text"
                   name="name"
                   value={form.name}
+                  maxLength={35}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   required
@@ -201,9 +202,16 @@ export default function ContactUs() {
                       : "border-gray-300 focus:ring-primary/30"
                   }`}
                 />
-                {errors.name && touched.name && (
+                 <div className="flex justify-between text-xs mt-1">
+              {errors.name ? (
+                <p className="text-red-500">{errors.name}</p>
+              ) : (
+                <span className="text-gray-400">{form.name.length}/35</span>
+              )}
+            </div>
+                {/* {errors.name && touched.name && (
                   <span className="text-xs text-red-500">{errors.name}</span>
-                )}
+                )} */}
               </div>
               <div>
                 <label className="block mb-1 text-sm font-medium text-gray-700">

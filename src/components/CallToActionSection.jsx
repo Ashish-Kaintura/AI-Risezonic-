@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaMagic, FaRobot } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CallToActionSection = () => {
   useEffect(() => {
@@ -43,19 +44,19 @@ const CallToActionSection = () => {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          <a
-            href="/book-demo"
+          <Link
+            to="/book-demo"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform"
           >
             <FaMagic className="text-lg" /> Book a Free Consultation
-          </a>
+          </Link>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-600 text-blue-700 font-semibold rounded-full bg-white hover:bg-blue-50 hover:scale-105 transition-transform"
           >
             <FaRobot className="text-lg" /> Build Your Own GPT
-          </a>
+          </Link>
         </div>
       </div>
     </section>

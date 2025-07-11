@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useFormPopup } from "../context/FormContext";
 
-const validateName = (name) => name.trim().length > 0 && name.trim().length <= 35;
+const validateName = (name) =>
+  name.trim().length > 0 && name.trim().length <= 35;
 
 const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -98,6 +99,7 @@ const PopupForm = () => {
               type="text"
               name="name"
               placeholder="Your Name"
+              maxLength={35}
               className={`w-full px-4 py-3 rounded-xl border ${
                 errors.name ? "border-red-400" : "border-gray-200"
               } focus:ring-2 focus:ring-blue-400 outline-none transition`}
@@ -106,10 +108,15 @@ const PopupForm = () => {
               value={fields.name}
               onChange={handleChange}
             />
-            {errors.name && (
-              <p className="text-red-500 text-xs mt-1">{errors.name}</p>
-            )}
+            <div className="flex justify-between text-xs mt-1">
+              {errors.name ? (
+                <p className="text-red-500">{errors.name}</p>
+              ) : (
+                <span className="text-gray-400">{fields.name.length}/35</span>
+              )}
+            </div>
           </div>
+
           <div>
             <input
               type="email"
