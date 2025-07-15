@@ -21,7 +21,10 @@ import CallToActionSection from "../components/CallToActionSection";
 import TeamSection from "../components/TeamSection";
 import GallerySection from "../components/GallerySection";
 import VideoSection from "../components/VideoSection";
+<<<<<<< HEAD
 import AISolutionsGrid from "../components/AISolutionsGrid";
+=======
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,8 +46,12 @@ const Home = () => {
       <WhatMakesUsDifferent />
 
       <EcosystemSection />
+<<<<<<< HEAD
       <TeamSection />
       <AISolutionsGrid />
+=======
+      <TeamSection/>
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
       {/* <GallerySection/>
       <VideoSection/> */}
       {/* Testimonials */}

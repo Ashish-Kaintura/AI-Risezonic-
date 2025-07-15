@@ -78,6 +78,14 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex items-center space-x-6 text-sm flex-wrap">
+<<<<<<< HEAD
+=======
+          {/* <div className="flex items-center space-x-2">
+            <FaWhatsapp size={27} className="text-gray-200" />
+            <span className="hidden sm:inline">WhatsApp:</span>
+            <span className="font-semibold">+91 8178857250</span>
+          </div> */}
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
           <div className="flex items-center space-x-2">
             <FiPhone size={27} className="text-blue-200" />
             <span className="font-semibold">+91 8178857250</span>
@@ -88,9 +96,15 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <nav className="bg-white shadow-md font-sans items-center">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="text-xl font-bold -mt-[10px] ">
+=======
+      <nav className="bg-white shadow-md  font-sans">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+          <Link to="/" className="text-xl font-bold text-blue-600">
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
             <img
               className="w-48"
               src="https://i.postimg.cc/qqtCN8Gg/Whats-App-Image-2025-06-27-at-3-38-13-PM-removebg-preview.png"
@@ -102,7 +116,11 @@ const Navbar = () => {
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           </div>
+<<<<<<< HEAD
           <ul className="hidden md:flex space-x-6 items-center uppercase  font-light">
+=======
+          <ul className="hidden md:flex space-x-6 items-center">
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
             <li>
               <Link to="/" className={linkClass("/")}>
                 Home
@@ -113,13 +131,66 @@ const Navbar = () => {
                 About
               </Link>
             </li>
+<<<<<<< HEAD
             <li>
+=======
+
+            <li className="relative group">
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
               <Link
                 to="/ai-solution-and-product"
                 className={linkClass("/ai-solution-and-product")}
               >
+<<<<<<< HEAD
                 AI Solutions & Products
               </Link>
+=======
+                {" "}
+                <button
+                  className="flex items-center gap-1  hover:text-blue-600 focus:outline-none"
+                  onClick={() => setDropdownOpen((open) => !open)}
+                  onBlur={() => setDropdownOpen(false)}
+                >
+                  AI Solutions & Products
+                  {/* <FiChevronDown className="mr-1" /> */}
+                </button>
+              </Link>
+              {/* <div
+              className={`absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50 ${
+                dropdownOpen ? "block" : "hidden"
+              } group-hover:block`}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <Link
+                to="/ai-apps"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <FaLightbulb className="mr-2 text-blue-500" />
+                AI Apps We Build
+              </Link>
+              <Link
+                to="/ai-education"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <FaChalkboardTeacher className="mr-2 text-blue-500" />
+                AI in Education
+              </Link>
+              <Link
+                to="/robotics-ai"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <FaRobot className="mr-2 text-blue-500" />
+                Robotics + AI
+              </Link>
+              <Link
+                to="/consulting"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <FaLightbulb className="mr-2 text-blue-500" />
+                Consulting for Institutions
+              </Link>
+            </div> */}
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
             </li>
 
             <li>
@@ -135,6 +206,7 @@ const Navbar = () => {
                 PainPointForm
               </Link>
             </li>
+<<<<<<< HEAD
             <li className="relative group">
               <Link
                 to="/learn-with-ai-risezonic"
@@ -186,12 +258,18 @@ const Navbar = () => {
                 </Link>
               </div>
             </li>
+=======
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
           </ul>
           <button
             onClick={openForm}
             className="hidden md:flex px-8 py-3 bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
           >
+<<<<<<< HEAD
             Book Your Seat
+=======
+            Contact Us
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
           </button>
         </div>
         {isOpen && (

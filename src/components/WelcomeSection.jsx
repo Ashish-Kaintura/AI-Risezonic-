@@ -65,7 +65,11 @@ const WelcomeSection = () => {
               data-aos="zoom-in"
               data-aos-delay="400"
             >
+<<<<<<< HEAD
             Book Your Seat Now
+=======
+              Get Started
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
             </a>
           </div>
           <div className="absolute inset-0 bg-zinc-900 rotate-12  bottom-[8.20rem] w-[900px] right-1 left-2  " />

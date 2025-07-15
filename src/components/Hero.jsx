@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
+<<<<<<< HEAD
 import leftface from "../video/leftface.mp4";
 // import rightface from "../video/rightface.mp4";
+=======
+
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
 const Hero = () => {
   // Typing animation logic
   const texts = React.useMemo(() => ["AI.Risezonic"], []);
@@ -40,6 +44,7 @@ const Hero = () => {
   }, [charIndex, isDeleting, textIndex, texts]);
 
   return (
+<<<<<<< HEAD
     <section className="relative rounded-lg shadow-xl overflow-hidden pt-28 h-[750px] sm:mt-[120px] items-center">
       {/* Animated background */}
       {/* <div className="absolute inset-0 z-0">
@@ -67,6 +72,26 @@ const Hero = () => {
           </span>
         </p>
         <p className="text-lg text-white">Learn. Build. Innovate.</p>
+=======
+    <section className="relative rounded-lg shadow-xl overflow-hidden pt-28 h-[750px] items-center">
+      {/* Animated background */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-full h-full animate-gradient bg-[linear-gradient(270deg,#60a5fa,#a7f3d0,#f472b6,#60a5fa)] bg-[length:400%_400%] opacity-80 blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-transparent"></div>
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center space-y-8">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 drop-shadow-lg tracking-tight min-h-[70px]">
+          <span className="text-pink-500">{displayedText}</span>
+          <span className="animate-pulse">|</span>
+        </h1>
+        <p className="text-2xl md:text-3xl text-gray-800 font-medium max-w-2xl mx-auto">
+          Empowering the Future with{" "}
+          <span className="bg-gradient-to-r from-blue-400 via-pink-400 to-green-400 bg-clip-text text-transparent font-bold">
+            Generative AI
+          </span>
+        </p>
+        <p className="text-lg text-gray-700">Learn. Build. Innovate.</p>
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
 
         <div className="flex flex-wrap justify-center gap-3 mt-2">
           <span className="bg-white/80 border border-blue-200 px-4 py-2 rounded-full shadow text-base font-medium flex items-center gap-2">

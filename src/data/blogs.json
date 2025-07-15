@@ -229,5 +229,60 @@
         ],
         "conclusion": "With the right support, students don’t just learn AI — they launch AI.",
         "cta": "Empower your students with GenAI project programs."
+<<<<<<< HEAD
+=======
+    },
+    {
+        "id": "chatgpt-in-education",
+        "title": "ChatGPT in Education: Transforming Classrooms with Conversational AI",
+        "slug": "chatgpt-in-education",
+        "date": "2025-07-07",
+        "author": "Rajshre Singh",
+       "Video":"https://youtu.be/AXn2XVLf7d0?si=3Zb9WX7w3mxwkuAh",
+        "tags": [
+            "ChatGPT",
+            "Conversational AI",
+            "EdTech"
+        ],
+        "intro": "ChatGPT is more than a chatbot—it's a classroom companion. Discover how conversational AI is making learning interactive, personalized, and accessible for all.",
+        "readTime": "5 min read",
+        "sections": [
+            {
+                "heading": "What is ChatGPT?",
+                "points": [
+                    "A conversational AI developed by OpenAI",
+                    "Understands and generates human-like text",
+                    "Can answer questions, explain concepts, and assist with assignments"
+                ]
+            },
+            {
+                "heading": "How ChatGPT Enhances Learning",
+                "points": [
+                    "24/7 homework help for students",
+                    "Instant feedback on essays and projects",
+                    "Supports multiple languages and subjects",
+                    "Encourages curiosity and self-paced learning"
+                ]
+            },
+            {
+                "heading": "Responsible Use in Classrooms",
+                "points": [
+                    "Teachers guide students on ethical AI use",
+                    "ChatGPT as a supplement, not a replacement",
+                    "Privacy and data safety are prioritized"
+                ]
+            },
+            {
+                "heading": "Real-World Impact",
+                "points": [
+                    "Boosts student engagement",
+                    "Reduces teacher workload for repetitive queries",
+                    "Makes education more inclusive and accessible"
+                ]
+            }
+        ],
+        "conclusion": "ChatGPT is reshaping education by making knowledge interactive and available anytime. The future of learning is conversational.",
+        "cta": "Explore how ChatGPT can support your institution’s learning goals. Contact AI.Risezonic for a demo."
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
     }
 ]

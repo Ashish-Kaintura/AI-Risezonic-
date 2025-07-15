@@ -1,6 +1,7 @@
 Add AI-themed illustration from undraw.co   https://undraw.co/illustrations
 
 
+<<<<<<< HEAD
    {
         "id": "chatgpt-in-education",
         "title": "ChatGPT in Education: Unlocking Personalized, Interactive Learning",
@@ -52,3 +53,6 @@ Add AI-themed illustration from undraw.co   https://undraw.co/illustrations
         "conclusion": "ChatGPT is more than a chatbot—it's a catalyst for personalized, accessible, and engaging education. The future classroom is interactive, and AI is at its core.",
         "cta": "Ready to bring conversational AI to your campus? Contact AI.Risezonic for a tailored demo."
     }
+=======
+ 
+>>>>>>> c941c98dc161401dc15ee59ab8be2e424adac3b7
